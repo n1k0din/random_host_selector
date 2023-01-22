@@ -12,15 +12,17 @@ def change_host(update: Update, context: CallbackContext) -> None:
 
     previous_changed_at = context.bot_data.get('changed_at')
     now = datetime.now()
-    if previous_changed_at and now - previous_changed_at < timedelta(minutes=1):
-        logging.info('Почему так часто меняешь?')
+    if previous_changed_at and now - previous_changed_at < timedelta(seconds=10):
+        context.bot.send_message(
+            chat_id=update.effective_chat.id,
+            text='Почему так часто меняешь?',
+        )
         return None
     context.bot_data['changed_at'] = now
     logging.info(f'changed_at: {now}, starting process')
     process = Popen(
         ['/usr/bin/python3', '/root/host_picker/host_picker.py'],
     )
-    process.communicate()
     logging.info(f'Subprocess exit code: {process.returncode}')
 
 

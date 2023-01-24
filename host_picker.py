@@ -91,7 +91,7 @@ PHRASES = [
     'bakal nahan rapat pangwangunan salajengna',
     'itafanya mkutano ujao wa maendeleo',
     'kommer att hålla nästa utvecklingsmöte',
-    'ay gaganapin ang susunod na pulong ng pag -unlad',
+    'ay gaganapin ang susunod na pulong ng pag-unlad',
     'ҷаласаи навбатиро баргузор мекунад',
     'அடுத்த மேம்பாட்டுக் கூட்டத்தை நடத்துவார்',
     'киләсе үсеш җыелышын үткәрәчәк',
